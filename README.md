@@ -28,7 +28,7 @@
 <p align="center"><img src="./docs/chaos-playground.png" alt="chaos-playground png" /></p>
 
 <p align="center">
-    <!-- <a href="" target="blank">View Demo</a> -->
+    <a href="https://chaosplayground.netlify.app/apps" target="blank">View Demo</a>
     ·
     <a href="https://github.com/farhanangullia/chaos-playground/issues/new/choose">Report Issue</a>
     ·
@@ -39,9 +39,10 @@
 This web portal is composed of micro apps of various software and architectural patterns on various use cases for developers and architects to practice chaos experiments against.
 
 
-<!-- ## 🚀 Demo
+## 🚀 Demo
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e1fec818-e5c1-40cd-9603-e888d56a2266/deploy-status)](https://app.netlify.com/sites/chaosplayground/deploys)
 
-Try the app: [Chaos Playground]() -->
+Try the app: [Chaos Playground](https://chaosplayground.netlify.app/apps)
 
 ## ✨ Features
 

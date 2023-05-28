@@ -98,3 +98,4 @@ terraform.rc
 .env
 
 tmp
+*.env
