@@ -54,7 +54,13 @@ Try the app: [Chaos Playground](https://chaosplayground.netlify.app)
 ## 🌟 Micro Apps
 
 - **Likes App**
-  
+
+
+| App       	| Services                      	| Language 	| Observable 	|
+|-----------	|-------------------------------	|----------	|------------	|
+| Likes App 	| [like-service](apps/like-service), [counter-service](apps/counter-service) 	| Go       	| Yes        	|
+
+
 <!-- ## 🛠️ Installation Steps -->
 
 ## License
