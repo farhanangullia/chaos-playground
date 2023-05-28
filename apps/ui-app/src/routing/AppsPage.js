@@ -16,7 +16,7 @@ function AppsPage() {
         { "name": "Likes App", "description": "Microservice for liking stuff...", "labels": ["Go", "K8s", "Postgres", "Redis", "OTEL"], "disabled": false },
         { "name": "eCommerce Shopping Cart", "description": "Event driven microservices for cart checkout.", "labels": ["Go", "EDA", "Kafka", "RabbitMQ"], "disabled": true },
         { "name": "Digital Wallet", "description": "Microservices with dependencies.", "labels": ["C#", ".NET Core", "Postgres", "OTEL"], "disabled": true },
-        { "name": "Card Readers", "description": "IoT with pub/sub message broker.", "labels": ["C#", ".NET Core", "Mosquitto", "Postgres"], "disabled": true }
+        { "name": "Subscription Billing", "description": "Event driven subscribe and bill services.", "labels": ["Go", "Lambda", "DynamoDB"], "disabled": true }
     ]
 
     const displayApps = () => {
