@@ -43,7 +43,7 @@ This web portal is composed of micro apps of various software and architectural 
 
 Try the app: [Chaos Playground]() -->
 
-## 🌟 Features
+## ✨ Features
 
 - **OAuth Login**
 - **Access to 4 micro apps**
