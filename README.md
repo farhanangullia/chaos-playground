@@ -46,10 +46,11 @@ Try the app: [Chaos Playground](https://chaosplayground.netlify.app)
 
 ## ✨ Features
 
+- **Responsive UI**
 - **OAuth Login**
 - **Access to 4 micro apps**
-- **Responsive UI**
-  
+- **All apps are observable**
+
 ## 🌟 Micro Apps
 
 - **Likes App**
