@@ -53,8 +53,6 @@ Try the app: [Chaos Playground](https://chaosplayground.netlify.app)
 
 ## 🌟 Micro Apps
 
-- **Likes App**
-
 
 | App       	| Services                      	| Language 	| Observable 	|
 |-----------	|-------------------------------	|----------	|------------	|
