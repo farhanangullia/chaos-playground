@@ -1,0 +1,3 @@
+[submodule "apps/likes-app"]
+	path = apps/likes-app
+	url = https://github.com/farhanangullia/likes-app.git
