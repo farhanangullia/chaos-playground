@@ -10,9 +10,9 @@ export const AuthProvider = ({ children }) => {
     navigate(appState?.returnTo || window.location.pathname);
   };
 
-  if (!(AUTH0_DOMAIN && AUTH0_CLIENT_ID && AUTH0_CALLBACK_URL)) {
-    return null;
-  }
+  // if (!(AUTH0_DOMAIN && AUTH0_CLIENT_ID && AUTH0_CALLBACK_URL)) {
+  //   return null;
+  // }
 
   return (
     <Auth0Provider

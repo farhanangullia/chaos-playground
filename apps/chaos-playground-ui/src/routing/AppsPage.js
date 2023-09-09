@@ -11,12 +11,9 @@ import { Grid, Card, CardActions, Button, CardContent, Typography } from '@mui/m
 
 function AppsPage() {
 
-    // Label Categories: Architecture, Infrastructure/Platform, Database, Pattern, Observability
     const apps = [
-        { "name": "Likes App", "description": "Microservice for liking stuff...", "labels": ["Go", "K8s", "Postgres", "Redis", "OTEL"], "disabled": false },
-        { "name": "eCommerce Shopping Cart", "description": "Event driven microservices for cart checkout.", "labels": ["Go", "EDA", "Kafka", "RabbitMQ"], "disabled": true },
-        { "name": "Digital Wallet", "description": "Microservices with dependencies.", "labels": ["C#", ".NET Core", "Postgres", "OTEL"], "disabled": true },
-        { "name": "Subscription Billing", "description": "Event driven subscribe and bill services.", "labels": ["Go", "Lambda", "DynamoDB"], "disabled": true }
+        { "name": "Likes App", "description": "Like stuff...", "labels": ["Go", "Postgres", "Redis", "OTEL"], "route": "/likes-app", "disabled": false },
+        { "name": "eCommerce App", "description": "Add to cart and place orders!", "labels": ["Python", "Postgres", "Redis"], "route": "/ecommerce-app", "disabled": false },
     ]
 
     const displayApps = () => {
@@ -35,11 +32,7 @@ function AppsPage() {
                                                     {app.name}
                                                 </Typography>
                                             </Grid>
-                                            {/* <Grid item>
-          <Typography gutterBottom variant="h6" component="div">
-            Easy
-          </Typography>
-        </Grid> */}
+        
                                         </Grid>
                                         <Typography color="text.secondary" variant="body2">
                                             {app.description}
@@ -53,7 +46,7 @@ function AppsPage() {
                                 </CardContent>
                                 <Divider variant="middle" />
                                 <CardActions style={{ justifyContent: 'center' }}>
-                                    <Button style={{ width: '80%' }} color="squid" variant="contained" component={Link} to="/likes-service" disabled={app.disabled}>
+                                    <Button style={{ width: '80%' }} color="squid" variant="contained" component={Link} to={app.route} disabled={app.disabled}>
                                         PLAY
                                     </Button>
                                 </CardActions>

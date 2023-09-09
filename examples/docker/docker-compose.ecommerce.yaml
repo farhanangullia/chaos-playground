@@ -1,0 +1,75 @@
+version: "2"
+services:
+  catalog-service:
+    container_name: catalog-service
+    hostname: catalog-service
+    build:
+      dockerfile: Dockerfile
+      context: ../../apps/ecommerce-app/catalog-service
+    restart: unless-stopped
+    ports:
+      - "5000:8000"
+    environment:
+      - DB_URI=postgresql://postgres:postgres@ecommerce-postgres:5432/postgres 
+    depends_on:
+      - ecommerce-postgres
+    networks:
+      - local-net
+
+  cart-service:
+    container_name: cart-service
+    hostname: cart-service
+    build:
+      dockerfile: Dockerfile
+      context: ../../apps/ecommerce-app/cart-service
+    restart: unless-stopped
+    ports:
+      - "7000:8000"
+    environment:
+      - REDIS_HOST=ecommerce-redis
+      - REDIS_PORT=6379
+    depends_on:
+      - ecommerce-postgres
+      - ecommerce-redis
+    networks:
+      - local-net
+
+  order-service:
+    container_name: order-service
+    hostname: order-service
+    build:
+      dockerfile: Dockerfile
+      context: ../../apps/ecommerce-app/order-service
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_URI=postgresql://postgres:postgres@ecommerce-postgres:5432/postgres
+      - CART_SERVICE_URL=cart-service:8000
+      - PRODUCT_SERVICE_URL=catalog-service:8000
+    depends_on:
+      - ecommerce-postgres
+    networks:
+      - local-net
+
+  ecommerce-postgres:
+    container_name: ecommerce-postgres
+    hostname: ecommerce-postgres
+    image: postgres:14.7
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - local-net
+
+  ecommerce-redis:
+    container_name: ecommerce-redis
+    image: redis:7.0.10
+    networks:
+      - local-net
+
+networks:
+  local-net:

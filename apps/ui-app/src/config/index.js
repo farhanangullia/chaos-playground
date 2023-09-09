@@ -1,5 +1,0 @@
-export const LIKE_API_BASE_URL = process.env.REACT_APP_LIKE_API_BASE_URL;
-export const COUNTER_API_BASE_URL = process.env.REACT_APP_COUNTER_API_BASE_URL;
-export const AUTH0_DOMAIN = process.env.REACT_APP_AUTH0_DOMAIN;
-export const AUTH0_CLIENT_ID = process.env.REACT_APP_AUTH0_CLIENT_ID;
-export const AUTH0_CALLBACK_URL = process.env.REACT_APP_AUTH0_CALLBACK_URL;

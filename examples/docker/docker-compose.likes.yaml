@@ -1,0 +1,68 @@
+
+version: "2"
+services:
+  counter-service:
+    container_name: counter-service
+    hostname: counter-service
+    build:
+      dockerfile: Dockerfile
+      context: ../../apps/likes-app/counter-service
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    networks:
+      - local-net
+    depends_on:
+      - likes-redis-server
+
+  like-service:
+    container_name: like-service
+    hostname: like-service
+    build:
+      dockerfile: Dockerfile
+      context: ../../apps/likes-app/like-service
+    restart: unless-stopped
+    ports:
+      - "9080:9080"
+    networks:
+      - local-net
+    depends_on:
+      - likes-postgres
+      - likes-redis-lock
+
+  likes-postgres:
+    container_name: likes-postgres
+    hostname: likes-postgres
+    image: postgres:14.7
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ../../apps/likes-app/like-service/db/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      - ../../apps/likes-app/like-service/db/fill_tables.sql:/docker-entrypoint-initdb.d/fill_tables.sql
+    networks:
+      - local-net
+
+  likes-redis-server:
+    container_name: likes-redis-server
+    hostname: likes-redis-server
+    image: redis:7.0.10
+    ports:
+      - "6379:6379"
+    networks:
+      - local-net
+
+  likes-redis-lock:
+    container_name: likes-redis-lock
+    hostname: likes-redis-lock
+    image: redis:7.0.10
+    ports:
+      - "6479:6379"
+    networks:
+      - local-net
+
+networks:
+  local-net:

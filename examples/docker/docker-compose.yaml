@@ -1,0 +1,24 @@
+version: "2"
+services:
+  chaos-playground-ui:
+    container_name: chaos-playground-ui
+    build:
+      dockerfile: Dockerfile
+      context: ../../apps/chaos-playground-ui
+      args:
+        - REACT_APP_LIKE_API_BASE_URL=http://localhost:9080
+        - REACT_APP_COUNTER_API_BASE_URL=http://localhost:9090
+        - REACT_APP_CATALOG_API_BASE_URL=http://localhost:5000
+        - REACT_APP_CART_API_BASE_URL=http://localhost:7000
+        - REACT_APP_ORDER_API_BASE_URL=http://localhost:8000
+        # - REACT_APP_AUTH0_DOMAIN='' # Set value to enable Auth0
+        # - REACT_APP_AUTH0_CLIENT_ID='' # Set value to enable Auth0
+        # - REACT_APP_AUTH0_CALLBACK_URL='' # Set value to enable Auth0
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    networks:
+      - local-net
+
+networks:
+  local-net:

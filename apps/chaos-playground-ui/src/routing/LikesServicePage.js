@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Grid, Card, CardContent, Typography, Divider } from '@mui/material';
 import GraphComponent from "../components/GraphComponent";
 import LikeComponent from "../components/LikeComponent";
-import LikeService from '../services/LikeService'
-import ViewsService from '../services/ViewsService'
+import LikeService from '../services/likes/LikeService'
+import ViewsService from '../services/likes/ViewsService'
 import { useInterval } from '../utils';
 
 function LikesServicePage() {
@@ -20,7 +20,6 @@ function LikesServicePage() {
     }, 1000 * 1);
 
     const getLikesResp = () => {
-        // console.log("Executing getLikesResp");
         LikeService.getLikes().then((response) => {
             setLikes(response.data);
             setLikesError(false);
@@ -42,18 +41,13 @@ function LikesServicePage() {
     }, []);
 
     const postLikeResp = (data) => {
-        // console.log("Executing postLikeResp", data);
         LikeService.addLike(data).then((response) => {
             setLikes(response.data);
-            // setLikesError(false); // TODO: update handling of post to alert
-            // console.log(response.data);
         })
             .catch((error) => {
                 if (error.response?.status === 429) {
-                    // setLikesError(false);
                     setLikes(likes);
                 } else {
-                    // setLikesError(true);
                     setLikes({ likes: [] });
                 }
                 console.error(`Error: ${error}`);
@@ -61,7 +55,6 @@ function LikesServicePage() {
     }
 
     const handle_like = (id) => {
-        // console.log(id);
         postLikeResp({ id: id });
     }
 
@@ -82,7 +75,6 @@ function LikesServicePage() {
     }, 1000 * 1);
 
     const getViewsResp = () => {
-        // console.log("Executing getViewsResp");
         ViewsService.getViews().then((response) => {
             setViews(response.data);
             setViewsError(false);
@@ -104,7 +96,6 @@ function LikesServicePage() {
     }, []);
 
     const postViewsResp = (data) => {
-        // console.log("Executing postViewsResp", data);
         ViewsService.addView().then((response) => {
             setViews(response.data);
             // setViewsError(false);
@@ -125,7 +116,7 @@ function LikesServicePage() {
         if (Object.keys(likes.likes).length > 0) {
             return (
                 <>
-                    Pod {likes.hostname}
+                    Hostname: {likes.hostname}
                 </>
             )
         }
@@ -135,7 +126,7 @@ function LikesServicePage() {
         if (Object.keys(views).length > 0) {
             return (
                 <>
-                    Pod {views.hostname}
+                    Hostname: {views.hostname}
                 </>
             )
         }
@@ -154,10 +145,7 @@ function LikesServicePage() {
     return (
         <>
             <Typography variant="h4" align="center" style={{ marginTop: '20px' }}>
-                Like your most used compute service!
-            </Typography>
-            <Typography variant="subtitle1" align="center" style={{ marginTop: '0px' }}>
-                Which service do you use to run your workloads? Hit that 'like' button!
+                Hit that 'like' button!
             </Typography>
             <Grid container spacing={2} style={{ marginTop: '5px', height: '100%' }} justifyContent="center" alignItems="center">
                 <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>

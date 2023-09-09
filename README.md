@@ -48,18 +48,40 @@ Try the app: [Chaos Playground](https://chaosplayground.netlify.app)
 
 - **Responsive UI**
 - **OAuth Login**
-- **Access to 4 micro apps**
-- **All apps are observable**
+- **Access to 2 micro apps (and counting)**
 
 ## 🌟 Micro Apps
 
 
-| App       	| Services                      	| Language 	| Observable 	|
+| App       	| Services                      	| Language 	| Patterns 	|
 |-----------	|-------------------------------	|----------	|------------	|
-| Likes App 	| [like-service](https://github.com/farhanangullia/likes-app/tree/fde0f24ae0499fee812784815a9533addd6b0be5/like-service), [counter-service](https://github.com/farhanangullia/likes-app/tree/fde0f24ae0499fee812784815a9533addd6b0be5/counter-service) 	| Go       	| Yes        	|
+| Likes App 	| [like-service](https://github.com/farhanangullia/likes-app/tree/main/like-service), [counter-service](https://github.com/farhanangullia/likes-app/tree/main/counter-service) 	| Go       	| Repository Pattern        	|
+| eCommerce App 	| [catalog-service](https://github.com/farhanangullia/ecommerce-app/tree/main/catalog-service), [cart-service](https://github.com/farhanangullia/ecommerce-app/tree/main/cart-service), [order-service](https://github.com/farhanangullia/ecommerce-app/tree/main/order-service) 	| Python       	| Hexagonal Architecture        	|
 
+## 🛠️ Installation Steps
 
-<!-- ## 🛠️ Installation Steps -->
+### Docker
+> **_NOTE:_**  By default, Auth is disabled. Set Auth0 values in examples/docker/docker-compose.yaml to enable auth for accessing the apps.
+
+Clone repository:
+```
+git clone https://github.com/farhanangullia/chaos-playground.git
+```
+
+Initialize submodules:
+```
+make init
+```
+
+Deploy with compose:
+```
+make start
+```
+
+Clean up:
+```
+make stop
+```
 
 ## License
 
