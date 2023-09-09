@@ -1,6 +1,10 @@
 .PHONY: init
 init:
 	git submodule init
+	git submodule update
+
+.PHONY: update
+update:
 	git submodule update --remote 
 
 .PHONY: start
@@ -27,4 +31,4 @@ env:
 	sudo chkconfig docker on
 	cd /opt && git clone https://github.com/farhanangullia/chaos-playground.git && cd chaos-playground && make init && docker-compose -p chaos-playground -f examples/docker/docker-compose.likes.yaml -f examples/docker/docker-compose.ecommerce.yaml up -d --build
 
-.PHONY: init tools start stop env
+.PHONY: init update tools start stop env
