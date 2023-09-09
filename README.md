@@ -56,7 +56,7 @@ Try the app: [Chaos Playground](https://chaosplayground.netlify.app)
 
 | App       	| Services                      	| Language 	| Observable 	|
 |-----------	|-------------------------------	|----------	|------------	|
-| Likes App 	| [like-service](apps/like-service), [counter-service](apps/counter-service) 	| Go       	| Yes        	|
+| Likes App 	| [like-service]([apps/like-service](https://github.com/farhanangullia/likes-app/tree/fde0f24ae0499fee812784815a9533addd6b0be5/like-service)), [counter-service](https://github.com/farhanangullia/likes-app/tree/fde0f24ae0499fee812784815a9533addd6b0be5/counter-service) 	| Go       	| Yes        	|
 
 
 <!-- ## 🛠️ Installation Steps -->
