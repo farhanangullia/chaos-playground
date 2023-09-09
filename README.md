@@ -14,9 +14,9 @@
 <a href="https://github.com/farhanangullia/chaos-playground/fork" target="blank">
 <img src="https://img.shields.io/github/forks/farhanangullia/chaos-playground?style=flat-square" alt="chaos-playground forks"/>
 </a>
-<a href="https://github.com/farhanangullia/chaos-playground/stargazers" target="blank">
+<!-- <a href="https://github.com/farhanangullia/chaos-playground/stargazers" target="blank">
 <img src="https://img.shields.io/github/stars/farhanangullia/chaos-playground?style=flat-square" alt="chaos-playground stars"/>
-</a>
+</a> -->
 <a href="https://github.com/farhanangullia/chaos-playground/issues" target="blank">
 <img src="https://img.shields.io/github/issues/farhanangullia/chaos-playground?style=flat-square" alt="chaos-playground issues"/>
 </a>
