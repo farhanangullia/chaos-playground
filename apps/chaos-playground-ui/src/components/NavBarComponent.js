@@ -23,21 +23,6 @@ function NavBarComponent() {
     setAnchorEl(null);
   };
 
-
-const checkAuth = () => {
-  console.log(isAuthenticated);
-  // console.log(user);
-  // console.log(isLoading);
-}
-
-useInterval(() => {
-  checkAuth();
-}, 1000 * 1);
-
-if (isLoading) {
-  console.log("Loading...");
-}
-
   return (
     <>
       <AppBar position="static" style={{ backgroundColor: '#0f1b2a' }}>
@@ -65,6 +50,7 @@ if (isLoading) {
               'aria-labelledby': 'basic-button',
             }}
           >
+            <MenuItem onClick={handleMenuClose} component={Link} to="about">About</MenuItem>
             <MenuItem onClick={handleMenuClose} component={Link} to="apps">Applications</MenuItem>
           </Menu>
           <img src='/fire.png' alt="logo" style={{ width: '48px', height: '48px' }} />
