@@ -11,9 +11,9 @@
 <a href="https://github.com/farhanangullia/chaos-playground/blob/main/LICENSE" target="blank">
 <img src="https://img.shields.io/github/license/farhanangullia/chaos-playground?style=flat-square" alt="chaos-playground license" />
 </a>
-<a href="https://github.com/farhanangullia/chaos-playground/fork" target="blank">
+<!-- <a href="https://github.com/farhanangullia/chaos-playground/fork" target="blank">
 <img src="https://img.shields.io/github/forks/farhanangullia/chaos-playground?style=flat-square" alt="chaos-playground forks"/>
-</a>
+</a> -->
 <!-- <a href="https://github.com/farhanangullia/chaos-playground/stargazers" target="blank">
 <img src="https://img.shields.io/github/stars/farhanangullia/chaos-playground?style=flat-square" alt="chaos-playground stars"/>
 </a> -->
