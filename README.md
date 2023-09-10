@@ -78,6 +78,8 @@ Deploy with compose:
 make start
 ```
 
+> Navigate to the Chaos Playground UI in your web browser by visiting http://localhost:8080.
+
 Clean up:
 ```
 make stop
