@@ -55,8 +55,8 @@ Try the app: [Chaos Playground](https://chaosplayground.netlify.app)
 
 | App       	| Services                      	| Language 	| Highlights 	|
 |-----------	|-------------------------------	|----------	|------------	|
-| Likes App 	| [like-service](https://github.com/farhanangullia/likes-app/tree/main/like-service), [counter-service](https://github.com/farhanangullia/likes-app/tree/main/counter-service) 	| Go       	| Repository Pattern, OpenTelemetry        	|
-| eCommerce App 	| [catalog-service](https://github.com/farhanangullia/ecommerce-app/tree/main/catalog-service), [cart-service](https://github.com/farhanangullia/ecommerce-app/tree/main/cart-service), [order-service](https://github.com/farhanangullia/ecommerce-app/tree/main/order-service), [shipping-service](https://github.com/farhanangullia/ecommerce-app/tree/main/shipping-service) 	| Python, Go       	| Hexagonal Architecture, Clean Architecture        	|
+| Likes App 	| [like-service](https://github.com/farhanangullia/likes-app/tree/main/like-service), [counter-service](https://github.com/farhanangullia/likes-app/tree/main/counter-service) 	| Go       	| Repository Pattern, OpenTelemetry, REST        	|
+| eCommerce App 	| [catalog-service](https://github.com/farhanangullia/ecommerce-app/tree/main/catalog-service), [cart-service](https://github.com/farhanangullia/ecommerce-app/tree/main/cart-service), [order-service](https://github.com/farhanangullia/ecommerce-app/tree/main/order-service), [shipping-service](https://github.com/farhanangullia/ecommerce-app/tree/main/shipping-service) 	| Python, Go       	| Hexagonal Architecture, Clean Architecture, gRPC, REST        	|
 
 ## 🛠️ Installation Steps
 
