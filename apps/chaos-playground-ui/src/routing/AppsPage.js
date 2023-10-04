@@ -13,7 +13,7 @@ function AppsPage() {
 
     const apps = [
         { "name": "Likes App", "description": "Like stuff...", "labels": ["Go", "Postgres", "Redis", "OTEL"], "route": "/likes-app", "disabled": false },
-        { "name": "eCommerce App", "description": "Add to cart and place orders!", "labels": ["Python", "Postgres", "Redis"], "route": "/ecommerce-app", "disabled": false },
+        { "name": "eCommerce App", "description": "Add to cart and place orders!", "labels": ["Python", "Go", "gRPC", "Postgres", "Redis"], "route": "/ecommerce-app", "disabled": false },
     ]
 
     const displayApps = () => {
