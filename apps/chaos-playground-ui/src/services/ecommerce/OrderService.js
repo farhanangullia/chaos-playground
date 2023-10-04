@@ -3,8 +3,14 @@ import { ORDER_API_BASE_URL } from "../../config";
 
 class OrderService {
 
-    checkout(sessionID){
-        return axios.post(`${ORDER_API_BASE_URL}/checkout`, null, {
+    checkout(sessionID, address, country){
+        let requestBody = {
+            shippingDetails: {
+                address: address,
+                country: country
+            }
+        }
+        return axios.post(`${ORDER_API_BASE_URL}/checkout`, requestBody, {
             headers: { 'X-Session-ID': { sessionID } }
           });
     }

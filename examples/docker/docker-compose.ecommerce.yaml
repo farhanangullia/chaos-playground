@@ -47,6 +47,29 @@ services:
       - DB_URI=postgresql://postgres:postgres@ecommerce-postgres:5432/postgres
       - CART_SERVICE_URL=cart-service:8000
       - PRODUCT_SERVICE_URL=catalog-service:8000
+      - SHIPPING_SERVICE_URL=shipping-service:8082
+    depends_on:
+      - ecommerce-postgres
+      - shipping-service
+      - catalog-service
+      - cart-service
+    networks:
+      - local-net
+
+  shipping-service:
+    container_name: shipping-service
+    hostname: shipping-service
+    build:
+      dockerfile: Dockerfile
+      context: ../../apps/ecommerce-app/shipping-service
+    restart: unless-stopped
+    ports:
+      - "9200:9200"
+      - "8082:8082"
+    environment:
+      - DB_HOST=ecommerce-postgres
+      - HTTP_PORT=9200
+      - GRPC_PORT=8082
     depends_on:
       - ecommerce-postgres
     networks:
