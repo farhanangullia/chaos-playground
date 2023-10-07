@@ -28,8 +28,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - image: ghcr.io/chaos-playground-ui
-            dockerfile: apps/chaos-playground-ui/Dockerfile
+          - image: "${{ env.REGISTRY }}/chaos-playground/chaos-playground-ui"
+            context: apps/chaos-playground-ui
       
     permissions:
       contents: read
@@ -80,7 +80,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
         with:
-          context: ${{ matrix.dockerfile }}
+          context: ${{ matrix.context }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
