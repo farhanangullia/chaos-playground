@@ -28,7 +28,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - image: "${{ env.REGISTRY }}/chaos-playground/chaos-playground-ui"
+          - image: ghcr.io/chaos-playground/chaos-playground-ui
             context: apps/chaos-playground-ui
       
     permissions:
