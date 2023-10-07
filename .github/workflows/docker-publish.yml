@@ -28,7 +28,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - image: ghcr.io/chaos-playground/chaos-playground-ui
+          - image: ghcr.io/farhanangullia/chaos-playground/chaos-playground-ui
             context: apps/chaos-playground-ui
       
     permissions:
@@ -64,7 +64,7 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.ACCESS_TOKEN }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
