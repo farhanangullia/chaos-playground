@@ -10,7 +10,7 @@ updates:
     assignees:
       - "farhanangullia"
     labels:
-      - "submodule-updates"
+      - "dependencies"
     reviewers:
       - "farhanangullia"
     open-pull-requests-limit: 10
