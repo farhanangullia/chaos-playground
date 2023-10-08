@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    allow:
+      - dependency-name: "apps/ecommerce-app"
+      - dependency-name: "apps/likes-app"
+    schedule:
+      interval: "daily"
+    assignees:
+      - "farhanangullia"
+    labels:
+      - "submodule-updates"
+    reviewers:
+      - "farhanangullia"
+    open-pull-requests-limit: 10
