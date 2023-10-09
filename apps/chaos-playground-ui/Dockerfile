@@ -41,4 +41,4 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
-CMD sed -i '/\/\*ENV_BEGIN\*\/`/r '<(env | grep --color=never "^REACT_APP_") /usr/share/nginx/html; nginx '-g daemon off;'
+CMD sed -i "s|PLACEHOLDER|$(env | grep --color=never '^REACT_APP_' | tr '\n' ',')|" /usr/share/nginx/html/index.html; nginx '-g daemon off;'

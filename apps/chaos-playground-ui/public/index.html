@@ -23,9 +23,8 @@
     <title>Chaos Playground</title>
     <script>
       window.env = {};
-      /*ENV_BEGIN*/`
-      `/*ENV_END*/
-        .split('\n')
+      /*ENV_BEGIN*/`PLACEHOLDER`/*ENV_END*/
+        .split(',')
         .map((kv) => kv.split('='))
         .forEach(([key, value]) => {
           window.env[key] = value;
