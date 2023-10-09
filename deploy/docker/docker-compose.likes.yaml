@@ -4,9 +4,7 @@ services:
   counter-service:
     container_name: counter-service
     hostname: counter-service
-    build:
-      dockerfile: Dockerfile
-      context: ../../apps/likes-app/counter-service
+    image: ghcr.io/farhanangullia/likes-app/counter-service:v1.0.0
     restart: unless-stopped
     ports:
       - "9090:9090"
@@ -18,9 +16,7 @@ services:
   like-service:
     container_name: like-service
     hostname: like-service
-    build:
-      dockerfile: Dockerfile
-      context: ../../apps/likes-app/like-service
+    image: ghcr.io/farhanangullia/likes-app/like-service:v1.0.0
     restart: unless-stopped
     ports:
       - "9080:9080"

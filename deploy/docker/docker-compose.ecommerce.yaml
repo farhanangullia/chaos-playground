@@ -3,9 +3,7 @@ services:
   catalog-service:
     container_name: catalog-service
     hostname: catalog-service
-    build:
-      dockerfile: Dockerfile
-      context: ../../apps/ecommerce-app/catalog-service
+    image: ghcr.io/farhanangullia/ecommerce-app/catalog-service:v1.0.0
     restart: unless-stopped
     ports:
       - "5000:8000"
@@ -19,9 +17,7 @@ services:
   cart-service:
     container_name: cart-service
     hostname: cart-service
-    build:
-      dockerfile: Dockerfile
-      context: ../../apps/ecommerce-app/cart-service
+    image: ghcr.io/farhanangullia/ecommerce-app/cart-service:v1.0.0
     restart: unless-stopped
     ports:
       - "7000:8000"
@@ -37,9 +33,7 @@ services:
   order-service:
     container_name: order-service
     hostname: order-service
-    build:
-      dockerfile: Dockerfile
-      context: ../../apps/ecommerce-app/order-service
+    image: ghcr.io/farhanangullia/ecommerce-app/order-service:v1.0.0
     restart: unless-stopped
     ports:
       - "8000:8000"
@@ -59,9 +53,7 @@ services:
   shipping-service:
     container_name: shipping-service
     hostname: shipping-service
-    build:
-      dockerfile: Dockerfile
-      context: ../../apps/ecommerce-app/shipping-service
+    image: ghcr.io/farhanangullia/ecommerce-app/shipping-service:v1.0.0
     restart: unless-stopped
     ports:
       - "9200:9200"

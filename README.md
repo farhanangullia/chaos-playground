@@ -61,7 +61,7 @@ Try the app: [Chaos Playground](https://chaosplayground.netlify.app)
 ## 🛠️ Installation Steps
 
 ### Docker
-> **_NOTE:_**  By default, Auth is disabled. Set Auth0 values in examples/docker/docker-compose.yaml to enable auth for accessing the apps.
+> **_NOTE:_**  By default, Auth is disabled. Set Auth0 values in deploy/docker/docker-compose.yaml to enable auth for accessing the apps.
 
 Clone repository:
 ```
