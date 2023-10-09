@@ -9,7 +9,7 @@ update:
 
 .PHONY: start
 start:
-	docker-compose -p chaos-playground -f deploy/docker/docker-compose.yaml -f deploy/docker/docker-compose.tools.yaml -f deploy/docker/docker-compose.likes.yaml -f deploy/docker/docker-compose.ecommerce.yaml up -d --build
+	docker-compose -p chaos-playground -f deploy/docker/docker-compose.yaml -f deploy/docker/docker-compose.tools.yaml -f deploy/docker/docker-compose.likes.yaml -f deploy/docker/docker-compose.ecommerce.yaml up -d
 
 .PHONY: stop
 stop:
