@@ -21,6 +21,16 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Chaos Playground</title>
+    <script>
+      window.env = {};
+      /*ENV_BEGIN*/`
+      `/*ENV_END*/
+        .split('\n')
+        .map((kv) => kv.split('='))
+        .forEach(([key, value]) => {
+          window.env[key] = value;
+        });
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
