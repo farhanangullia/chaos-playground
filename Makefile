@@ -9,11 +9,11 @@ update:
 
 .PHONY: start
 start:
-	docker-compose -p chaos-playground -f examples/docker/docker-compose.yaml -f examples/docker/docker-compose.tools.yaml -f examples/docker/docker-compose.likes.yaml -f examples/docker/docker-compose.ecommerce.yaml up -d --build
+	docker-compose -p chaos-playground -f deploy/docker/docker-compose.yaml -f deploy/docker/docker-compose.tools.yaml -f deploy/docker/docker-compose.likes.yaml -f deploy/docker/docker-compose.ecommerce.yaml up -d --build
 
 .PHONY: stop
 stop:
-	docker-compose -p chaos-playground -f examples/docker/docker-compose.yaml -f examples/docker/docker-compose.tools.yaml -f examples/docker/docker-compose.likes.yaml -f examples/docker/docker-compose.ecommerce.yaml down --remove-orphans
+	docker-compose -p chaos-playground -f deploy/docker/docker-compose.yaml -f deploy/docker/docker-compose.tools.yaml -f deploy/docker/docker-compose.likes.yaml -f deploy/docker/docker-compose.ecommerce.yaml down --remove-orphans
 
 .PHONY: tools
 tools:
@@ -34,7 +34,7 @@ env:
 	sudo systemctl enable nginx
 	sudo systemctl start nginx
 	sudo systemctl status nginx
-	cd /opt && git clone https://github.com/farhanangullia/chaos-playground.git && cd chaos-playground && make init && docker-compose -p chaos-playground -f examples/docker/docker-compose.likes.yaml -f examples/docker/docker-compose.ecommerce.yaml up -d --build
+	cd /opt && git clone https://github.com/farhanangullia/chaos-playground.git && cd chaos-playground && make init && docker-compose -p chaos-playground -f deploy/docker/docker-compose.likes.yaml -f deploy/docker/docker-compose.ecommerce.yaml up -d
 	cp -f /opt/chaos-playground/reverse-proxy.conf /etc/nginx/nginx.conf
 	sudo service nginx restart
 	
