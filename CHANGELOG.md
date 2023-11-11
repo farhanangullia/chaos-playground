@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.1](https://github.com/farhanangullia/chaos-playground/compare/v1.0.0...v1.0.1) (2023-11-11)
+
+
+### Bug Fixes
+
+* bump axios module for security patch ([4c359c7](https://github.com/farhanangullia/chaos-playground/commit/4c359c7895055890461406052ae6c9a64eebf5d7))
+
 ## 1.0.0 (2023-10-09)
 
 
