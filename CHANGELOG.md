@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.0.2](https://github.com/farhanangullia/chaos-playground/compare/v1.0.1...v1.0.2) (2023-11-11)
+
+
+### Bug Fixes
+
+* Bump @babel/traverse from 7.21.4 to 7.23.3 in /apps/chaos-playground-ui ([39e85ea](https://github.com/farhanangullia/chaos-playground/commit/39e85ea053d39c45a2f5e69478a3744447bf177a))
+
 ### [1.0.1](https://github.com/farhanangullia/chaos-playground/compare/v1.0.0...v1.0.1) (2023-11-11)
 
 
